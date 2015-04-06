@@ -15,8 +15,14 @@ public class BackEnd
 	{
 		List<String> total = e.read();
 		List<String> message = new ArrayList<String>();
-		
-		return null;
+ 		for(int i = 0; i < total.size(); i++)
+		{
+			if (total.get(i).equals(username))
+			{
+				message.add(total.get(i+1));
+			}
+		}
+		return message;
 	}
 	public void addMessage(String username, String msg)
 	{
@@ -24,7 +30,13 @@ public class BackEnd
 	}
 	public List<String> getUsers()
 	{
-		return null;
+		List<String> total = e.read();
+		List<String> usernames = new ArrayList<String>();
+ 		for(int i = 0; i < total.size(); i= i+2)
+ 		{
+ 			usernames.add(total.get(i));
+		}
+		return usernames;
 	}
 	
 
