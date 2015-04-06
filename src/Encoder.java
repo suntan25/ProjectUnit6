@@ -27,7 +27,7 @@ public class Encoder {
 	{
 		try {
 			PrintWriter p = new PrintWriter(file);
-			
+/*			
 			for(String s: myData.keySet()){
 				p.print(s);
 				
@@ -37,7 +37,7 @@ public class Encoder {
 				}
 				p.println();
 			}
-			
+*/			
 			
 			
 			p.close();
