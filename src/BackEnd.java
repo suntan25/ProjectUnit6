@@ -27,7 +27,7 @@ public class BackEnd
 	}
 	public void addMessage(String username, String msg)
 	{
-		   e.write(username);        
+		   e.write(username, msg);        
 	}
 	public List<String> getUsers()
 	{
