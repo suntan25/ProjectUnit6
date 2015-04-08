@@ -23,21 +23,19 @@ public class Encoder {
 		
 	}
 	
-	public void write(String plaintext)
+	public void write(String username, String message)
 	{
 		try {
 			PrintWriter p = new PrintWriter(file);
-/*			
-			for(String s: myData.keySet()){
-				p.print(s);
+			
+			p.print(username);
+			p.print(" ");
+			p.print(message);
 				
-				for(String d: myData.get(s)){
-					p.print("\t");
-					p.print(d);
-				}
+			
 				p.println();
-			}
-*/			
+		
+			
 			
 			
 			p.close();
@@ -57,9 +55,8 @@ public class Encoder {
 			Scanner scan = new Scanner(file);
 			
 			while(scan.hasNextLine()){
-				String[] line = scan.nextLine().split("\\t");
-				readIt.add(line[0]);
-				readIt.add(line[1]);			
+				String line = scan.nextLine();
+				readIt.add(line);				
 			}
 					
 			scan.close();
