@@ -14,19 +14,20 @@ public class BackEnd
 	public List<String> getMessages(String username)
 	{
 		List<String> total = e.read();
-		List<String> message = new ArrayList<String>();
+		List<String> messages = new ArrayList<String>();
  		for(int i = 0; i < total.size(); i++)
 		{
-			if (total.get(i).equals(username))
+			String[] words = total.get(i).split(" ");
+ 			if (words[0].equals(username))
 			{
-				message.add(total.get(i+1));
+				messages.add(words[1]);
 			}
 		}
-		return message;
+		return messages;
 	}
 	public void addMessage(String username, String msg)
 	{
-		           
+		   e.write(username);        
 	}
 	public List<String> getUsers()
 	{
