@@ -32,10 +32,8 @@ public class Encoder {
 			p.print(" ");
 			p.print(message);
 				
-			
 				p.println();
 		
-			
 			
 			
 			p.close();
