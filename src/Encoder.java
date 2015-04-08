@@ -3,6 +3,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -26,18 +27,17 @@ public class Encoder {
 	public void write(String username, String message)
 	{
 		try {
-			PrintWriter p = new PrintWriter(file);
+			FileWriter p = new FileWriter(file, true);
 			
-			p.print(username);
-			p.print(" ");
-			p.print(message);
+			p.write(username);
+			p.write(" ");
+			p.write(message);
 				
-				p.println();
-		
-			
+				p.write("\n");
+					
 			
 			p.close();
-		} catch (FileNotFoundException e) {
+		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
