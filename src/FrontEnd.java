@@ -2,10 +2,12 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.FileNotFoundException;
+
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
@@ -56,7 +58,7 @@ public class FrontEnd extends JFrame{
 			}
 			else
 			{
-				// show a JOptionPane w/ an error message (i.e., missing username and/or message)
+				JOptionPane.showMessageDialog (null, "Please fill out all fields", "ERROR", JOptionPane.ERROR_MESSAGE);
 				
 			}
 		}
