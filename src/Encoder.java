@@ -31,7 +31,7 @@ public class Encoder {
 			
 			p.write(username);
 			p.write(" ");
-			p.write(message);
+			p.write(message + "MICKELISCOOLEST");
 				
 				p.write("\n");
 					
@@ -53,7 +53,7 @@ public class Encoder {
 			Scanner scan = new Scanner(file);
 			
 			while(scan.hasNextLine()){
-				String line = scan.nextLine();
+				String line = scan.nextLine().substring(0,scan.nextLine().length()-15);
 				readIt.add(line);				
 			}
 					
