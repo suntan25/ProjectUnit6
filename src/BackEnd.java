@@ -33,9 +33,10 @@ public class BackEnd
 	{
 		List<String> total = e.read();
 		List<String> usernames = new ArrayList<String>();
- 		for(int i = 0; i < total.size(); i= i+2)
+ 		for(int i = 0; i < total.size(); i= i++)
  		{
- 			usernames.add(total.get(i));
+ 			String[] words = total.get(i).split(" ");
+ 			usernames.add(words[0]);
 		}
 		return usernames;
 	}
